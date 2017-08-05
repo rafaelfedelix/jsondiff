@@ -17,6 +17,11 @@ public class DiffService {
         this.jsonRepository = jsonRepository;
     }
 
+    /**
+     * Get the json difference by specified id
+     * @param id json's id
+     * @return new DiffResponse
+     */
     public DiffResponse getDiff(Long id) {
         String decodedLeft = getDecodedLeftById(id);
         String decodedRight = getDecodedRightById(id);

@@ -14,10 +14,20 @@ public class PersistenceService {
         this.jsonRepository = jsonRepository;
     }
 
+    /**
+     * Saves the json on Left domain
+     * @param id the json id
+     * @param encodedJson base 64 encoded json
+     */
     public void saveOnLeft(Long id, String encodedJson) {
         jsonRepository.saveOnLeft(id, encodedJson);
     }
 
+    /**
+     * Saves the json on Right domain
+     * @param id the json id
+     * @param encodedJson base 64 encoded json
+     */
     public void saveOnRight(Long id, String encodedJson) {
         jsonRepository.saveOnRight(id, encodedJson);
     }

@@ -38,11 +38,13 @@ public class UrlMappings {
 
         post("/v1/diff/:id/left", (req, res) -> {
             persistenceService.saveOnLeft(getId(req), req.body());
+            res.status(201);
             return "saved";
         });
 
         post("/v1/diff/:id/right", (req, res) -> {
             persistenceService.saveOnRight(getId(req), req.body());
+            res.status(201);
             return "saved";
         });
 

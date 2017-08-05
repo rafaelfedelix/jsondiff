@@ -23,7 +23,7 @@ public class UrlMappingsTest {
                 .when()
                 .post("/1/left")
                 .then()
-                .statusCode(200);
+                .statusCode(201);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class UrlMappingsTest {
                 .when()
                 .post("/1/right")
                 .then()
-                .statusCode(200);
+                .statusCode(201);
     }
 
     @Test

@@ -21,6 +21,11 @@ public class JpaJsonRepository implements JsonRepository {
         this.jsonRightDAO = jsonRightDAO;
     }
 
+    /**
+     * Saves the json on Left domain
+     * @param id the json id
+     * @param encodedJson base 64 encoded json
+     */
     @Override
     public void saveOnLeft(Long id, String encodedJson) {
         JsonLeftDomain domain = new JsonLeftDomain();
@@ -29,6 +34,11 @@ public class JpaJsonRepository implements JsonRepository {
         jsonLeftDAO.save(domain);
     }
 
+    /**
+     * Saves the json on Right domain
+     * @param id the json id
+     * @param encodedJson base 64 encoded json
+     */
     @Override
     public void saveOnRight(Long id, String encodedJson) {
         JsonRightDomain domain = new JsonRightDomain();
@@ -37,6 +47,12 @@ public class JpaJsonRepository implements JsonRepository {
         jsonRightDAO.save(domain);
     }
 
+    /**
+     * Get Left domain
+     * @param id the json id
+     * @return new DiffData
+     * @throws NoDataException if no data found
+     */
     @Override
     public DiffData getLeftById(Long id) {
         JsonLeftDomain left = jsonLeftDAO.findOne(id);
@@ -46,6 +62,12 @@ public class JpaJsonRepository implements JsonRepository {
         throw new NoDataException("No data found for id " + id);
     }
 
+    /**
+     * Get Right domain
+     * @param id the json id
+     * @return new DiffData
+     * @throws NoDataException if no data found
+     */
     @Override
     public DiffData getRightById(Long id) {
         JsonRightDomain left = jsonRightDAO.findOne(id);

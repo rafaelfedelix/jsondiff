@@ -2,7 +2,7 @@
 JsonDiff find the difference between two base 64 encoded JSON.
 
 ## Prerequisites
-1. Java 1.8 JDK
+- Java 1.8 JDK
 
 ## How to run
 Run the application through gradle
@@ -13,21 +13,21 @@ gradle run
 ## Usage
 #### Store the left json
 ```sh
-POST http://localhost:8080/v1/diff/{id}/left
+POST http://localhost:4567/v1/diff/{id}/left
 ewogICJ0ZXN0ZSI6IDEyMywKICAidGVzdGUyIjogMzIxCn0=
 ```
 Response: 201 Created
 
 #### Store the right json
 ```sh
-POST http://localhost:8080/v1/diff/{id}/right
+POST http://localhost:4567/v1/diff/{id}/right
 ewogICJ0ZXN0ZSI6IDEyMywKICAidGVzdGUyIjogMzIxCn0=
 ```
 Response: 201 Created
 
 #### Requesting the difference between them
 ```
-GET http://localhost:8080/v1/diff/{id}
+GET http://localhost:4567/v1/diff/{id}
 ```
 Json Response:
 ```

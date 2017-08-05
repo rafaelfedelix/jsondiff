@@ -1,0 +1,28 @@
+allprojects {
+    group 'br.com.fedelix.jsondiff'
+    version '1.0.0'
+    task wrapper(type: Wrapper) {
+        gradleVersion = '2.13'
+    }
+    apply plugin: 'idea'
+    idea {
+        module {
+            inheritOutputDirs = true
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        compile "org.springframework:spring-context:4.3.10.RELEASE"
+        compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.3'
+    }
+}

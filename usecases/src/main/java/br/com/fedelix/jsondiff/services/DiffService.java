@@ -13,7 +13,7 @@ public class DiffService {
     private JsonRepository jsonRepository;
 
     @Autowired
-    DiffService(JsonRepository jsonRepository) {
+    public DiffService(JsonRepository jsonRepository) {
         this.jsonRepository = jsonRepository;
     }
 

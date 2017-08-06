@@ -10,7 +10,7 @@ public class PersistenceService {
     private JsonRepository jsonRepository;
 
     @Autowired
-    PersistenceService(JsonRepository jsonRepository) {
+    public PersistenceService(JsonRepository jsonRepository) {
         this.jsonRepository = jsonRepository;
     }
 

@@ -3,6 +3,7 @@ JsonDiff find the difference between two base 64 encoded JSON.
 
 ## Prerequisites
 - Java 1.8 JDK
+- Gradle
 
 ## How to run
 Run the application through gradle
@@ -48,15 +49,14 @@ Json Response:
 
 ## Running tests
 
-The unit tests can be executed with gradle:
+All the tests can be executed with gradle.
+We need to run the server to get integration tests successfully.
 ```sh
+gradle run
 gradle test
-```
-For integration tests, run the server and then execute the tests located in rest-api folder:
-```
-gradle test --tests br.com.fedelix.jsondiff.mappings.UrlMappings
 ```
 
 ## Suggestions for improvement
 - Postgres hybrid mode can store the json with good performance and easily perform queries
 - Use UUID instead of Long
+- Embed web server for tests automatically

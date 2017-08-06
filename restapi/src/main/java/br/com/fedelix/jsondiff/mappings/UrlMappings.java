@@ -27,7 +27,7 @@ public class UrlMappings {
     private Gson gson = new GsonBuilder().serializeNulls().create();
 
     @Autowired
-    public UrlMappings(DiffService diffService, PersistenceService persistenceService) {
+    UrlMappings(DiffService diffService, PersistenceService persistenceService) {
         this.diffService = diffService;
         this.persistenceService = persistenceService;
     }

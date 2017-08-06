@@ -59,4 +59,3 @@ gradle test
 ## Suggestions for improvement
 - Postgres hybrid mode can store the json with good performance and easily perform queries
 - Use UUID instead of Long
-- Embed web server for tests automatically

@@ -50,9 +50,7 @@ Json Response:
 ## Running tests
 
 All the tests can be executed with gradle.
-We need to run the server to get integration tests successfully.
 ```sh
-gradle run
 gradle test
 ```
 

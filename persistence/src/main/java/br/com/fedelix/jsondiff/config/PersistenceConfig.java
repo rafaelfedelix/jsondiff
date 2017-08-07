@@ -3,6 +3,7 @@ package br.com.fedelix.jsondiff.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -22,6 +23,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @PropertySource("classpath:datasource-config.properties")
 @EnableJpaRepositories("br.com.fedelix.jsondiff")
+@Profile("prod")
 public class PersistenceConfig {
 
     @Autowired

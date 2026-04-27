@@ -24,7 +24,7 @@ public class DiffService {
      */
     public DiffResponse getDiff(Long id) {
         String decodedLeft = getDecodedLeftById(id);
-        String decodedRight = getDecodedRightById(id);
+        String decodedRight = getDecodedLeftById(id);
         DiffResponse diff = new DiffResponse();
         if (isNullOrDifferentLength(decodedLeft, decodedRight)) {
             diff.setMessage("Left and right have different length");
